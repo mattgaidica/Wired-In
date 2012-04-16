@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wired In</title>
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+<link href='http://fonts.googleapis.com/css?family=Imprima' rel='stylesheet' type='text/css'>
+<style>
+  .main {
+    background-color:red; 
+    width:100%; height:100%; 
+    z-index:1;
+    top:0; left:0; 
+    position:fixed;
+    background:url('red.png');
+  }
+  #text {
+    font-family: 'Imprima', sans-serif;
+    font-size:170px;
+    text-align:center;
+    margin-top:300px;
+    color:#fefefe;
+    text-shadow: 1px 1px white, -1px -1px #444;
+  }
+</style>
+
+<script>
+$(document).ready(function() {
+  $('.main').click(function() {
+    $('#green').toggle();
+  })
+});
+</script>
+
+</head>
+
+<body>
+
+<div class="main">
+  <div id="text">Busy.</div>
+</div>
+<div style="display:none;z-index:2;background-color:green;background:url('green.png');" id="green" class="main">
+  <div id="text">Let's Chat</div>
+</div>
+
+</body>
+</html>
